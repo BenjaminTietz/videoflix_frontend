@@ -11,15 +11,15 @@ import { ContinueWatching } from '../models/continue-watching';
   providedIn: 'root',
 })
 export class DatabaseService {
-  private videoUrl = `${environment.baseUrl}/videoflix/videos/`;
+  private videoUrl = `${environment.baseUrl}/videos/`;
   public videoSubject = new BehaviorSubject<VideoModel[]>([]);
   public videos$ = this.videoSubject.asObservable();
 
-  private videoFavoriteUrl = `${environment.baseUrl}/videoflix/favorite/`;
+  private videoFavoriteUrl = `${environment.baseUrl}/favorite/`;
   public videoFavoriteSubject = new BehaviorSubject<VideoModel[]>([]);
   public favoriteVideos$ = this.videoFavoriteSubject.asObservable();
 
-  private continueWatchingUrl = `${environment.baseUrl}/videoflix/continue-watching/`;
+  private continueWatchingUrl = `${environment.baseUrl}/continue-watching/`;
   public continueWatchingSubject = new BehaviorSubject<ContinueWatching[]>([]);
   public continueWatchingVideos$ = this.continueWatchingSubject.asObservable();
 
